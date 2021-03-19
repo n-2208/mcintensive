@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box; /*нужно для того, чтобы все сходилось пиксель в пиксель, чтобы сайт выглядел так, как в макете*/
+}
+body {
+  background-color: #010202;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1146px;
+  margin: auto;
+  padding: 56px 0px;
+}
+
+.logo {
+  display: block; /* для того, чтобы ссылка стала блочной*/
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+.app {
+  background: linear-gradient(
+    90deg,
+    #010202 0%,
+    #010202 45%,
+    rgba(1, 2, 2, 0.2) 90%
+  ); /*градиент перекрывает видео*/
+  min-height: 100vh;
+  color: #ffffff;
+  background-position: center right;
+}
+
+.film {
+  width: 90%;
+  max-width: 1146px;
+  margin: auto;
+  padding: 7% 0;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  opacity: 0.4;
+  color: #e5e5e5;
+  flex-wrap: wrap;
+}
+
+.tags > * {
+  margin-right: 15px;
+  padding-bottom: 10px;
+}
+
+.age {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  padding: 1px 5px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #e5e5e5;
+}
+
+.description {
+  max-width: 460px;
+  font-size: 21px;
+  line-height: 140%;
+  margin-bottom: 36px;
+}
+
+.button {
+  padding: 11px 26px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  line-height: 140%;
+  background: #2f2f2f;
+  color: white;
+  cursor: pointer;
+}
+.button-primary {
+  background: #ea6e20;
+  margin-right: 15px;
+}
+.button-text {
+  margin-right: 10px;
+  vertical-align: text-bottom;
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: auto;
+    padding-bottom: 400px;
+    background-color: #010202;
+    background: url("../img/cover-image.jpg") no-repeat bottom center / 300px;
+  }
+  .film {
+    padding-top: 2%;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 333px;
+  }
+  video {
+    display: none;
+  }
+  .film-logo {
+    max-width: 100%;
+  }
+  .tags {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .button-text {
+    display: none;
+  }
+  .user-name {
+    display: none;
+  }
+  .app {
+    padding-bottom: 250px;
+    background-size: 350px;
+    background-color: #010202;
+  }
+  .button {
+    margin-bottom: 10px;
+  }
+}
